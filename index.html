@@ -1003,8 +1003,8 @@
         if (v === title) return;                        // kolom judul yang diulang
         var d = cellLabelValue(v, "Date");
         var t = cellLabelValue(v, "Time");
-        if (d !== null && dateText === null){ dateText = d; return; }
-        if (t !== null && timeText === null){ timeText = t; return; }
+        if (d !== null && dateText === null){ dateText = d; descLines.push(v); return; }
+        if (t !== null && timeText === null){ timeText = t; descLines.push(v); return; }
         if (v.charAt(0) === "#"){ hashtags.push(v.split(/\s+/)[0]); return; }
         descLines.push(v);
       });
